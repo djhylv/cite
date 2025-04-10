@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name= "viewport" content="width=device-width, initial-scale=1.0">
+		<title>Movie Matrix</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function films () {
+				var d=document;
+				var k=0;
+				if ((d.filmsform.elements[0]).checked)
+					k=k+Number(d.filmsform.elements[0].value)
+				if ((d.filmsform.elements[1]).checked)
+					k=k+Number(d.filmsform.elements[1].value)
+				if ((d.filmsform.elements[2]).checked)
+					k=k+Number(d.filmsform.elements[2].value)
+				if ((d.filmsform.elements[3]).checked)
+					k=k+Number(d.filmsform.elements[3].value)
+				if ((d.filmsform.elements[4]).checked)
+					k=k+Number(d.filmsform.elements[4].value)
+				if ((d.filmsform.elements[5]).checked)
+					k=k+Number(d.filmsform.elements[5].value)
+				if ((d.filmsform.elements[6]).checked)
+					k=k+Number(d.filmsform.elements[6].value)
+				d.filmsform.output1.value = k;
+			}
+		</script>
+	</head>
+	<body>
+
+		<div class="form-block">
+			<h3 style="text-align: center">Анкета для фільмів</h3>
+			<p>виберіть жанри фільмів, які вам подобаються</p>
+			<form name="filmsform">
+				<input type="checkbox" name="film" value="100" onclick="films()"> бойовик <br>
+				<input type="checkbox" name="film" value="200" onclick="films()"> романтика <br>
+				<input type="checkbox" name="film" value="300" onclick="films()"> трилер <br>
+				<input type="checkbox" name="film" value="400" onclick="films()"> комедія <br>
+				<input type="checkbox" name="film" value="500" onclick="films()"> детектив <br>
+				<input type="checkbox" name="film" value="600" onclick="films()"> жахи <br>
+				<input type="checkbox" name="film" value="1000" onclick="films()"> українське кіно <br>
+				<br>
+				<span class="reward">Винагорода:  </span>
+				<!--<input type="button" name="film" value="Винагорода" onclick="films()">-->
+				<input class="reward" type="text" name="output1" size=25 placeholder="0"><br>
+				<br>
+				<input type="reset" value="Скинути вибір">
+			</form>
+		</div>
+
+	</body>
+</html>
+
+	
+

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name= "viewport" content="width=device-width, initial-scale=1.0">
+		<title>Movie Matrix</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script>
+			function calculate1 (a,h) {
+				var form = document.forms["triaform"];
+				var base = parseFloat(form.field1.value) || 0;
+				var height = parseFloat(form.field2.value) || 0;
+				form.output1.value = (base * height) / 2;
+			}
+		</script>
+	</head>
+	<body>
+
+		<div class="form-block">
+			<h3>Обчислення площі прямокутного трикутника</h3>
+			<form name="triaform">
+				<fieldset>
+					<legend>введення даних</legend>
+					основа <input type="number" name="field1" class="input-number" maxlength="4">
+					висота <input type="number" name="field2" class="input-number" maxlength="4"> <br>
+				</fieldset>
+				<fieldset>
+					<legend>обробка та виведення даних</legend>
+					площа: <input class="input-number" type="text" name="output1" readonly style="border: none; ">
+					<input type="button" value="Обчислити" onclick="calculate1(triaform.field1, triaform.field2)">
+				</fieldset>
+			</form>
+		</div>
+
+	</body>
+</html>
+
+	
+
